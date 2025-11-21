@@ -93,7 +93,7 @@ def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start_or_message))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, start_or_message))
-    app.add_handler(CommandHandler("models", show_models))
+    app.add_handler(CommandHandler("model", show_models))
 
     print("Bot running...")
     print(f"Fallback models: {len(FREE_MODELS)} -> {', '.join(FREE_MODELS)}")
